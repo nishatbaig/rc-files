@@ -13,6 +13,8 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'mileszs/ack.vim'
 Bundle 'bling/vim-airline'
 Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-fugitive'
+Bundle 'flazz/vim-colorschemes'
 
 "Bundles for PHP documentor.
 Bundle 'tobyS/vmustache'
@@ -69,12 +71,23 @@ set noswapfile
 
 "php documentor settings
 let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
-command -nargs=0 Doc call pdv#DocumentWithSnip()<CR>
+if !exists(":Doc")
+    command -nargs=0 Doc call pdv#DocumentWithSnip()<CR>
+endif
 
 " vim airline settings.
+" To fix status line https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation
+let g:airline_powerline_fonts=1
 set laststatus=2
-let g:airline#extensions#branch#enabled = 1
-let g:airline#extensions#ctrlp#show_adjacent_modes = 1
+let g:airline#extensions#branch#enabled=1
+let g:airline#extensions#ctrlp#show_adjacent_modes=1
 
 " Open vimrc
-nnoremap <leader>v :e ~/.vimrc<CR>
+noremap <leader>v :e ~/.vimrc<cr>
+noremap <leader>V :so ~/.vimrc<cr>
+
+"Set terminal color palette to 256
+set t_Co=256
+
+"Good colorscheme for the eye. Default is a little dull.
+colorscheme kkruby

@@ -31,3 +31,5 @@ attrcolor b ".I"
 # tell screen how to set colors. AB = background, AF=foreground
 #termcapinfo xterm-256color 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 
+# To avoid diff colors in screen mode.
+term screen-256color

@@ -1,0 +1,6 @@
+--type-add
+fr=.php,.phtml,.inc,.js,.less,.html
+--type-add
+fr-p=.php,.inc
+--type-add
+fr-ht=.html,.phtml

@@ -8,7 +8,8 @@ startup_message off
 
 # Window list at the bottom.
 hardstatus alwayslastline
-hardstatus string "%{+b wk} %-w%{= BW}%50>%n %t%{-}%+w%< %=%{= wb} $USER @ %H "
+# hardstatus string "%{+b wk} %-w%{= BW}%50>%n %t%{-}%+w%< %=%{= wb} $USER @ %H "
+hardstatus string '%{= kG}[%{G} $USER @ %H%? %1`%?%{g}][%= %{= kw}%-w%{+b yk} %n*%t%?(%u)%? %{-}%+w %=%{g}][%{B}%m/%d %{W}%C%A%{g}]'
 
 # From Stephen Shirley
 # Don't block command output if the terminal stops responding

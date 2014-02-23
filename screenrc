@@ -34,3 +34,6 @@ attrcolor b ".I"
 
 # To avoid diff colors in screen mode.
 term screen-256color
+
+# Bind escape to F2 
+bindkey -k k2 command
